@@ -587,3 +587,9 @@ main {
   }
 }
 
+@media (max-width: 540px) {
+  .home-button {
+    margin-top: clamp(90px, 20vw, 140px);
+  }
+}
+
