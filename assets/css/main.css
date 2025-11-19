@@ -154,6 +154,8 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .site-nav__list {
@@ -465,18 +467,26 @@ main {
 }
 
 .social a {
-  padding: 12px 22px;
-  border-radius: 999px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.25);
   transition: var(--transition-base);
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 1.1rem;
+  padding: 0;
 }
 
 .social a:hover,
 .social a:focus-visible {
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.1);
+}
+
+.social a i {
+  pointer-events: none;
 }
 
 .footer-nav-wrap {
@@ -520,6 +530,7 @@ main {
     min-width: 240px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
+    z-index: 20;
   }
 
   .site-nav.is-open {
@@ -598,7 +609,7 @@ main {
 
 @media (max-width: 540px) {
   .home-button {
-    margin-top: clamp(90px, 20vw, 140px);
+    margin-top: clamp(140px, 32vw, 220px);
   }
 }
 
