@@ -59,6 +59,8 @@ body::before {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .page-junior .brand-logo {
@@ -598,17 +600,21 @@ body::before {
 }
 
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
     color: white;
-    padding: 18px 40px;
+    padding: 16px 36px;
     text-decoration: none;
     border-radius: 50px;
-    font-size: 1.2em;
+    font-size: clamp(0.9rem, 3.4vw, 1.15rem);
     font-weight: 600;
     margin: 20px 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    white-space: nowrap;
 }
 
 .cta-button:hover {
@@ -617,7 +623,7 @@ body::before {
 }
 
 .cta-button i {
-    margin-right: 10px;
+    margin-right: 6px;
 }
 
 .footer {
@@ -628,8 +634,13 @@ body::before {
     margin-top: 50px;
 }
 
+.footer p {
+    white-space: nowrap;
+    font-size: clamp(0.9rem, 3vw, 1.05rem);
+}
+
 .footer .motto {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 3.2vw, 1.2rem);
     font-weight: 600;
     margin-top: 10px;
 }
@@ -750,9 +761,11 @@ body::before {
 }
 
 @media (max-width: 480px) {
-    .cta-button,
-    .cta-button#register {
-        font-size: 1em;
-        padding: 14px 28px;
+    .cta-button {
+        padding: 12px 26px;
+    }
+
+    .footer p {
+        font-size: clamp(0.85rem, 4vw, 1rem);
     }
 }

@@ -107,6 +107,8 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .brand-logo {
@@ -125,6 +127,12 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.site-header .title {
+  font-family: var(--font-heading, 'Playfair Display', 'Montserrat', 'Barlow', 'Segoe UI', sans-serif);
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  letter-spacing: 0.05em;
 }
 
 .subtitle {
@@ -490,9 +498,10 @@ main {
 
 .footer-copy {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 3vw, 0.95rem);
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 @media (max-width: 920px) {
